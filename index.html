@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teen Trivia Ultimate Arcade</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Tela de Fim de Jogo (Oculta) -->
+    <div id="screen-game-over" class="screen-over hidden">
+      <h1 class="title-win">💥 FIM DE JOGO! 🏆</h1>
+      <p class="winner-text">
+        O grupo <span id="winner-name"></span> dominou o placar e venceu!
+      </p>
+      <button onclick="resetGame()" class="btn btn-reset">
+        Jogar Novamente 🎉
+      </button>
+    </div>
+
+    <!-- Tela Principal do Jogo -->
+    <main id="screen-main" class="game-container">
+      <header class="header">
+        <h1 class="main-title">Teen Trivia Arcade</h1>
+        <button onclick="openModal()" class="btn btn-edit">
+          ⚙️ Configurar Painel (Times & Perguntas)
+        </button>
+      </header>
+
+      <!-- Painel de Perguntas -->
+      <section class="card-question">
+        <div class="card-header">
+          <span id="question-number" class="badge">Pergunta #1</span>
+          <span class="turn-indicator">🔥 PENSE EM EQUIPE</span>
+        </div>
+        <h2 id="question-text" class="question-text">
+          Cadastre perguntas no painel para começar!
+        </h2>
+
+        <div class="actions-grid-single">
+          <button onclick="nextQuestion()" class="btn btn-next-q">
+            ➡️ Próxima Pergunta do Match
+          </button>
+        </div>
+      </section>
+
+      <!-- Exibição Dinâmica dos Grupos -->
+      <section class="teams-grid" id="teams-display-container">
+        <!-- Injetado via JS -->
+      </section>
+    </main>
+
+    <!-- MODAL DE CONFIGURAÇÃO COMPLETO -->
+    <div id="setup-modal" class="modal-overlay hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">👾 Painel do Moderador</h3>
+          <button onclick="closeModal()" class="btn-close-modal">
+            ✕ Fechar
+          </button>
+        </div>
+
+        <div id="modal-teams-inputs">
+          <!-- Injetado via JS -->
+        </div>
+
+        <button onclick="saveModalData()" class="btn btn-save">
+          🔥 Salvar Configurações e Rodar Game!
+        </button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
