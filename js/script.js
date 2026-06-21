@@ -1,11 +1,16 @@
 // ==========================================
 // CONSTANTES E CONFIGURAÇÕES INICIAIS
 // ==========================================
-
 const DEFAULT_QUESTIONS = [
-  { q: "Qual rede social é famosa pelas dancinhas e vídeos curtos?" },
-  { q: "Qual jogo tem os modos Battle Royale e Construção?" },
-  { q: "Em qual série os personagens enfrentam o Demogorgon?" },
+  {
+    q: "Qual habilidade você considera sua maior força e como ela ajuda a sua equipe?",
+  },
+  {
+    q: "Diante de um erro ou falha recente, qual foi o maior aprendizado que você tirou?",
+  },
+  {
+    q: "Se você pudesse dominar uma nova competência até o fim deste ano, qual seria?",
+  },
 ];
 
 function getAvatarUrl(name) {
