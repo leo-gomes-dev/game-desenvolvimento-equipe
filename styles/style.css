@@ -1,4 +1,4 @@
-/* --- ESTILO POP ART / ARCADE NEON --- */
+/* --- ESTILO SUPER MARIO WORLD (RETRÔ ALEGRE) --- */
 * {
   margin: 0;
   padding: 0;
@@ -8,8 +8,9 @@
 }
 
 body {
-  background: radial-gradient(circle, #f472b6 0%, #3b82f6 100%);
-  color: #0f172a;
+  /* Fundo Azul Céu clássico das fases do Mario */
+  background: #5c94fc;
+  color: #111827;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,19 +23,20 @@ body {
   display: none !important;
 }
 
-/* --- TELA DE FIM DE JOGO --- */
+/* --- TELA DE VITÓRIA (LEVEL CLEARED) --- */
 .screen-over {
   text-align: center;
   padding: 50px;
-  background: #fef08a;
-  border: 6px solid #0f172a;
-  border-radius: 40px;
-  box-shadow: 15px 15px 0px #0f172a;
+  background: #fde047; /* Amarelo Bloco de Interrogação */
+  border: 5px solid #000000;
+  border-radius: 30px;
+  box-shadow: 10px 10px 0px #000000;
 }
 .title-win {
-  font-size: 3.5rem;
-  color: #ff007f;
-  text-shadow: 3px 3px 0 #0f172a;
+  font-size: 3.8rem;
+  color: #e11d48; /* Vermelho Mario */
+  text-shadow: 4px 4px 0 #000000;
+  text-transform: uppercase;
 }
 .winner-text {
   font-size: 1.8rem;
@@ -44,11 +46,11 @@ body {
 }
 #winner-name {
   color: #ffffff;
-  background: #3b82f6;
-  padding: 6px 20px;
-  border-radius: 16px;
-  border: 4px solid #0f172a;
-  box-shadow: 4px 4px 0px #0f172a;
+  background: #2563eb; /* Azul Luigi/Yoshi */
+  padding: 8px 24px;
+  border-radius: 20px;
+  border: 4px solid #000000;
+  box-shadow: 4px 4px 0px #000000;
 }
 
 /* --- GRID PRINCIPAL --- */
@@ -57,40 +59,40 @@ body {
   max-width: 1000px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 25px;
 }
 
 .header {
   text-align: center;
 }
 .main-title {
-  font-size: 4.5rem;
+  font-size: 4.8rem;
   text-transform: uppercase;
-  color: #ccff00;
+  color: #facc15;
+  /* Efeito de contorno grosso dos logos da Nintendo */
   text-shadow:
-    5px 5px 0px #0f172a,
-    -2px -2px 0px #0f172a,
-    2px -2px 0px #0f172a,
-    -2px 2px 0px #0f172a,
-    2px 2px 0px #0f172a;
-  transform: rotate(-1deg);
+    5px 5px 0px #000000,
+    -2px -2px 0px #000000,
+    2px -2px 0px #000000,
+    -2px 2px 0px #000000,
+    2px 2px 0px #000000;
   margin-bottom: 10px;
 }
 .subtitle {
   color: #ffffff;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-family: sans-serif;
   font-weight: bold;
-  text-shadow: 2px 2px 0px #0f172a;
+  text-shadow: 2px 2px 0px #000000;
 }
 
 /* CARD DE PERGUNTAS */
 .card-question {
   background: #ffffff;
-  border: 6px solid #0f172a;
-  border-radius: 32px;
+  border: 5px solid #000000;
+  border-radius: 28px;
   padding: 30px;
-  box-shadow: 12px 12px 0px #0f172a;
+  box-shadow: 10px 10px 0px #000000;
 }
 .card-header {
   display: flex;
@@ -100,89 +102,91 @@ body {
   gap: 10px;
 }
 .badge {
-  font-size: 1.1rem;
-  padding: 8px 20px;
-  background-color: #ff007f;
+  font-size: 1.2rem;
+  padding: 8px 22px;
+  background-color: #e11d48;
   color: #ffffff;
   border-radius: 9999px;
-  border: 4px solid #0f172a;
+  border: 4px solid #000000;
+  box-shadow: 3px 3px 0px #000000;
 }
 .turn-indicator {
-  font-size: 1.2rem;
-  color: #3b82f6;
+  font-size: 1.3rem;
+  color: #2563eb;
   text-transform: uppercase;
 }
 .question-text {
-  font-size: 2rem;
+  font-size: 2.1rem;
   text-align: center;
   margin: 35px 0;
   min-height: 80px;
-  color: #0f172a;
+  color: #000000;
   font-family: sans-serif;
   font-weight: 800;
 }
 
-/* BOTÕES ESTILO POP-COMICS */
+/* BOTÕES ESTILO DIRECIONAIS MACIOS */
 .actions-grid-single {
   display: grid;
   grid-template-columns: 1fr;
 }
 .btn {
-  padding: 20px;
+  padding: 18px;
   text-transform: uppercase;
-  font-size: 1.3rem;
-  border: 5px solid #0f172a;
-  border-radius: 20px;
+  font-size: 1.4rem;
+  border: 5px solid #000000;
+  border-radius: 24px;
   cursor: pointer;
   transition:
     transform 0.05s ease,
     box-shadow 0.05s ease;
 }
 .btn:active {
-  transform: translate(4px, 4px);
-  box-shadow: 2px 2px 0px #0f172a !important;
+  transform: translate(5px, 5px);
+  box-shadow: 0px 0px 0px #000000 !important;
 }
 .btn-next-q {
-  background-color: #ccff00;
-  color: #0f172a;
-  box-shadow: 8px 8px 0px #0f172a;
+  background-color: #4ade80; /* Verde Casco de Yoshi */
+  color: #000000;
+  box-shadow: 8px 8px 0px #000000;
 }
 .btn-next-q:hover {
-  background-color: #b5e600;
+  background-color: #22c55e;
 }
 .btn-reset {
   background-color: #a855f7;
   color: white;
-  box-shadow: 6px 6px 0px #0f172a;
+  box-shadow: 6px 6px 0px #000000;
 }
 .btn-edit {
-  background-color: #00ffff;
-  color: #0f172a;
-  box-shadow: 6px 6px 0px #0f172a;
-  font-size: 1rem;
+  background-color: #22d3ee;
+  color: #000000;
+  box-shadow: 6px 6px 0px #000000;
+  font-size: 1.1rem;
   padding: 12px 24px;
 }
 .btn-add-p {
-  background: #fef08a;
-  font-size: 0.9rem;
-  padding: 8px 16px;
+  background: #fde047;
+  font-size: 1rem;
+  padding: 10px 20px;
   margin-top: 10px;
-  border-radius: 12px;
-  border: 3px solid #0f172a;
-  box-shadow: 3px 3px 0px #0f172a;
-  color: #0f172a;
+  border-radius: 16px;
+  border: 4px solid #000000;
+  box-shadow: 4px 4px 0px #000000;
+  color: #000000;
 }
 .btn-danger {
   background: #fca5a5;
-  font-size: 0.8rem;
-  padding: 6px 12px;
-  border-radius: 8px;
-  border: 2px solid #0f172a;
+  font-size: 0.9rem;
+  padding: 6px 14px;
+  border-radius: 12px;
+  border: 3px solid #000000;
   cursor: pointer;
-  color: #0f172a;
+  color: #000000;
+  box-shadow: 2px 2px 0px #000000;
 }
 
-/* GRID DE TIMES */
+/* PAINEL DOS TIMES */
 .teams-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -197,21 +201,19 @@ body {
 
 .team-card {
   background: #ffffff;
-  border: 6px solid #0f172a;
-  border-radius: 32px;
+  border: 5px solid #000000;
+  border-radius: 28px;
   padding: 26px;
-  box-shadow: 10px 10px 0px #ccff00;
+  box-shadow: 10px 10px 0px #facc15; /* Amarelo sem o erro de duplicação */
 }
 .team-title {
   text-align: center;
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin-bottom: 25px;
-  color: #0f172a;
+  color: #000000;
   text-transform: uppercase;
-  text-shadow: 2px 2px 0px #e2e8f0;
 }
-
-/* PARTICIPANTES CORES VIVAS */
+/* PARTICIPANTES CORES VIVAS (ESTILO SUPER MARIO) */
 .players-list {
   display: flex;
   justify-content: center;
@@ -225,15 +227,14 @@ body {
   cursor: pointer;
 }
 .player-item:hover .avatar-wrapper {
-  transform: scale(1.08) rotate(2deg);
-  border-color: #ff007f;
+  transform: scale(1.08) rotate(3deg); /* Efeito animado e divertido */
+  border-color: #e11d48;
 }
 
 .avatar-wrapper {
-  width: 120px;
-  height: 120px;
-  background-color: #ffde59;
-  border: 5px solid #0f172a;
+  width: 100px;
+  height: 100px;
+  border: 5px solid #000000;
   border-radius: 24px;
   overflow: hidden;
   display: flex;
@@ -241,11 +242,14 @@ body {
   justify-content: center;
   margin-bottom: 12px;
   position: relative;
-  box-shadow: 5px 5px 0px #0f172a;
+  /* Removemos a cor amarela fixa do fundo e a sombra dura que vazava */
+  background-color: transparent;
+  box-shadow: 0px 5px 0px #000000;
   transition:
     transform 0.15s ease,
     border-color 0.15s ease;
 }
+
 .avatar-wrapper img {
   width: 100%;
   height: 100%;
@@ -253,52 +257,50 @@ body {
 }
 .player-name {
   font-size: 1rem;
-  color: #0f172a;
+  color: #000000;
   background: #ffffff;
-  padding: 4px 12px;
-  border: 3px solid #0f172a;
-  border-radius: 12px;
-  font-family: sans-serif;
-  font-weight: bold;
+  padding: 5px 14px;
+  border: 4px solid #000000;
+  border-radius: 14px;
+  text-transform: uppercase;
   text-align: center;
-  max-width: 120px;
+  max-width: 110px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  box-shadow: 2px 2px 0px #0f172a;
+  box-shadow: 3px 3px 0px #000000;
 }
 
-/* === DISABLED ESTILO DELETADO === */
+/* === ESTILO DE ELIMINAÇÃO (PLAYER DEFEATED) === */
 .player-item.disabled {
   filter: grayscale(1);
-  opacity: 0.15;
+  opacity: 0.25;
 }
 .player-item.disabled .avatar-wrapper {
-  border-color: #ef4444;
+  border-color: #e11d48;
   box-shadow: none;
 }
 .player-item.disabled .overlay-x {
   display: flex;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 120px;
-  height: 120px;
+  inset: 0; /* Alinha perfeitamente cobrindo todo o contêiner */
+  width: 100%;
+  height: 100%;
   align-items: center;
   justify-content: center;
   color: #ffffff;
-  font-size: 4.5rem;
-  background-color: rgba(239, 68, 68, 0.85);
-  border-radius: 18px;
-  border: 5px solid #ef4444;
+  font-size: 4rem;
+  background-color: rgba(225, 29, 72, 0.85); /* Vermelho translúcido de erro */
+  border-radius: 0px;
   z-index: 2;
+  text-shadow: 3px 3px 0px #000000;
 }
 
-/* --- MODAL E GERENCIADOR --- */
+/* --- MODAL E GERENCIADOR (MENU DE SELEÇÃO DE FASE) --- */
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(15, 23, 42, 0.85);
+  background: rgba(17, 24, 39, 0.85);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -306,13 +308,13 @@ body {
   padding: 15px;
 }
 .modal-content {
-  background: white;
-  border: 6px solid #0f172a;
-  border-radius: 32px;
+  background: #ffffff;
+  border: 5px solid #000000;
+  border-radius: 30px;
   padding: 30px;
   width: 100%;
   max-width: 700px;
-  box-shadow: 15px 15px 0px #00ffff;
+  box-shadow: 12px 12px 0px #22d3ee; /* Sombra ciano brilhante */
   max-height: 85vh;
   overflow-y: auto;
 }
@@ -321,38 +323,41 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
-  border-bottom: 5px solid #0f172a;
+  border-bottom: 5px solid #000000;
   padding-bottom: 10px;
 }
 .modal-title {
   font-size: 2.2rem;
-  color: #ff007f;
+  color: #e11d48;
+  text-transform: uppercase;
 }
 .btn-close-modal {
   background: #fca5a5;
-  border: 3px solid #0f172a;
-  border-radius: 12px;
+  border: 4px solid #000000;
+  border-radius: 14px;
   padding: 6px 14px;
-  font-size: 1rem;
+  font-size: 1.1rem;
   cursor: pointer;
-  box-shadow: 2px 2px 0px #0f172a;
+  text-transform: uppercase;
+  box-shadow: 3px 3px 0px #000000;
 }
 .btn-close-modal:hover {
   background: #f87171;
 }
 
 .modal-section {
-  background: #f8fafc;
-  border: 4px solid #0f172a;
+  background: #f3f4f6;
+  border: 4px solid #000000;
   border-radius: 20px;
   padding: 15px;
   margin-bottom: 20px;
-  box-shadow: 5px 5px 0px #0f172a;
+  box-shadow: 4px 4px 0px #000000;
 }
 .modal-section h4 {
   margin-bottom: 12px;
   font-size: 1.3rem;
-  color: #0f172a;
+  color: #000000;
+  text-transform: uppercase;
 }
 .form-group {
   display: flex;
@@ -367,33 +372,37 @@ body {
   gap: 10px;
   align-items: center;
   margin-bottom: 10px;
-  border-bottom: 2px dashed #cbd5e1;
+  border-bottom: 3px dashed #9ca3af;
   padding-bottom: 10px;
 }
 .form-row-questions {
   grid-template-columns: 5fr 1fr;
 }
 .modal-content label {
-  font-size: 1rem;
-  color: #0f172a;
+  font-size: 1.1rem;
+  color: #000000;
+  text-transform: uppercase;
 }
 .modal-content input[type="text"] {
-  padding: 10px;
-  border: 3px solid #0f172a;
-  border-radius: 12px;
-  font-size: 1rem;
-  font-family: sans-serif;
-  font-weight: bold;
-  background: #fff;
+  padding: 12px;
+  border: 4px solid #000000;
+  border-radius: 16px;
+  font-size: 1.1rem;
+  background: #ffffff;
+  color: #000000;
 }
 .btn-save {
-  background-color: #6ee7b7;
+  background-color: #4ade80; /* Verde casco */
+  color: #000000;
   width: 100%;
   padding: 18px;
-  font-size: 1.5rem;
-  box-shadow: 6px 6px 0px #0f172a;
+  font-size: 1.6rem;
+  box-shadow: 6px 6px 0px #000000;
   margin-top: 10px;
+  border: 5px solid #000000;
+  text-transform: uppercase;
+  border-radius: 20px;
 }
 .btn-save:hover {
-  background-color: #10b981;
+  background-color: #22c55e;
 }
