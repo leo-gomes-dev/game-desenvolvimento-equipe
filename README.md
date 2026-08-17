@@ -1,6 +1,6 @@
 # 🕹️ Teen Trivia Ultimate Arcade
 
-![GitHub Pages](https://shields.io) ![Tecnologias](https://shields.io)
+  ![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-222222?style=for-the-badge&logo=githubpages&logoColor=white) ![Tecnologias](https://img.shields.io/badge/Tecnologias-Stack-blue?style=for-the-badge)
 
 O **Teen Trivia Ultimate Arcade** é uma aplicação web interativa projetada para dinamizar dinâmicas de grupo, treinamentos e salas de aula. O sistema funciona como um painel de quiz competitivo no estilo arcade, permitindo que um moderador gerencie perguntas e elimine participantes em tempo real com base no desempenho das equipes.
 
