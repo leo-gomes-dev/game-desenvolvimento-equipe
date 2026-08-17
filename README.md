@@ -1,7 +1,6 @@
 # 🕹️ Teen Trivia Ultimate Arcade
 
-![GitHub Pages](https://shields.io)
-![Tecnologias](https://shields.io)
+![GitHub Pages](https://shields.io) ![Tecnologias](https://shields.io)
 
 O **Teen Trivia Ultimate Arcade** é uma aplicação web interativa projetada para dinamizar dinâmicas de grupo, treinamentos e salas de aula. O sistema funciona como um painel de quiz competitivo no estilo arcade, permitindo que um moderador gerencie perguntas e elimine participantes em tempo real com base no desempenho das equipes.
 
@@ -52,7 +51,7 @@ docs/
 
 1. Clone este repositório em sua máquina:
    ```bash
-   git clone https://github.com
+   git clone https://github.com/leo-gomes-dev/game-desenvolvimento-equipe.git
    ```
 2. Navegue até a pasta do projeto.
 3. Abra o arquivo `index.html` diretamente em qualquer navegador moderno ou utilize extensões como o *Live Server* no VS Code.
